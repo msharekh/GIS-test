@@ -14,6 +14,17 @@ require(["esri/Map", "esri/views/MapView", "esri/Graphic"], function(
     center: [46.70240879, 24.68045354] // Sets center point of view using longitude,latitude
   });
 
+
+  var centerPoint = new Point([46.70240879, 24.68045354]);
+  var circleGeometry = new Circle({
+    center: centerPoint,
+    radius: 100,             // add distance
+    radiusUnit: Units.MILES, // add distance unit
+    geodesic: true
+  });
+
+
+
   // Create a line geometry with the coordinates of the line
   var polyline = {
     type: "polyline", // autocasts as new Polyline()
@@ -33,9 +44,9 @@ require(["esri/Map", "esri/views/MapView", "esri/Graphic"], function(
 
   // Create a simple object containing useful information relating to the feature
   var lineAtt = {
-    Name: "Keystone Pipeline", // The name of the pipeline
-    Owner: "TransCanada", // The owner of the pipeline
-    Length: "3,456 km" // The length of the pipeline
+    // Name: "Keystone Pipeline", // The name of the pipeline
+    // Owner: "TransCanada", // The owner of the pipeline
+    // Length: "3,456 km" // The length of the pipeline
   };
 
   // Create the graphic
