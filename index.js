@@ -1,3 +1,16 @@
+require(["esri/Map", "esri/views/MapView"], function(Map, MapView) {
+  // Code to create the map and view will go here
+  var map = new Map({
+    basemap: "streets"
+  });
+  var view = new MapView({
+    container: "viewDiv", // Reference to the scene div created in step 5
+    map: map, // Reference to the map object created before the scene
+    zoom: 5, // Sets zoom level based on level of detail (LOD)
+    center: [46, 24] // Sets center point of view using longitude,latitude
+  });
+});
+
 function confirmFileSubmit() {
   var input = document.getElementById("fileUpload"); // get the input
   var file = input.files[0]; // assuming single file, no multiple

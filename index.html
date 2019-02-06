@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Intro to MapView - Create a 2D map</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+    <!-- adding arggis ref -->
+    <link
+      rel="stylesheet"
+      href="https://js.arcgis.com/4.10/esri/css/main.css"
+    />
+    <script src="https://js.arcgis.com/4.10/"></script>
+
     <script src="index.js"></script>
-</head>
-<body>
-    <input type="file" id="fileUpload" name="fileUpload"/> MyTest.txt //file name
-    <input type="button" value="open file" onclick="confirmFileSubmit()">
-</body>
+
+    <style>
+        html, body, #viewDiv {
+          padding: 0;
+          margin: 0;
+          height: 100%;
+          width: 100%;
+        }
+      </style>
+  </head>
+  <body>
+    <input type="file" id="fileUpload" name="fileUpload" /> MyTest.txt //file
+    name
+    <input type="button" value="open file" onclick="confirmFileSubmit()" />
+
+    <div id="viewDiv"></div>
+  </body>
 </html>
